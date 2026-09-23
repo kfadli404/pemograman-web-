@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        fieldset h3{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <fieldset style="width: 300px;">
+        <h3>Kalkulator Sederhana</h3>
+        <hr>
+        <table>
+            <tr>
+                <td><label>Input bilangan 1</label></td>
+                <td><input type="number" name="angka1" id="angka1"></td>
+            </tr>
+            <tr>
+                <td><label>Input bilangan 2</label></td>
+                <td><input type="number" name="angka2" id="angka2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="hitung('+')">+</button>
+                    <button onclick="hitung('-')">-</button>
+                    <button onclick="hitung('*')">x</button>
+                    <button onclick="hitung('/')">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Output</td>
+                <td><input type="text" id="output" readonly></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <script>
+    function hitung(operator) {
+      // Ambil nilai dari input dan ubah ke angka
+      const angka1 = parseFloat(document.getElementById('angka1').value);
+      const angka2 = parseFloat(document.getElementById('angka2').value);
+      const output = document.getElementById('output');
+
+      // Cek kalau input kosong
+      if (isNaN(angka1) || isNaN(angka2)) {
+        output.value = "Isi kedua angka dulu!";
+        return;
+      }
+
+      let hasil = 0;
+      switch (operator) {
+        case '+':
+          hasil = angka1 + angka2;
+          break;
+        case '-':
+          hasil = angka1 - angka2;
+          break;
+        case '*':
+          hasil = angka1 * angka2;
+          break;
+        case '/':
+          hasil = angka2 !== 0 ? angka1 / angka2 : "Tidak bisa bagi 0";
+          break;
+      }
+      output.value = hasil;
+    }
+  </script>
+</body>
+</html>

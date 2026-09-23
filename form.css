@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+.form{
+    background-color: white;
+    width: 40%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+    margin: 100px auto; 
+}
+.form .form-control{
+    width: 100%;
+}
+.form button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

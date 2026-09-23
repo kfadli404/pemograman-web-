@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Pendaftaran Beasiswa Nusantara</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Pendaftaran Beasiswa Nusantara</h1>
+        <label>Nama :</label><br>
+        <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" required><br><br>
+        <label>Password :</label><br>
+        <input type="password" class="form-control" placeholder="Masukkan Password Portal" required><br><br>
+        <label>Alasan memilih beasiswa :</label><br>
+        <textarea class="form-control" placeholder="Masukkan Alasan" required></textarea><br><br>
+        <label>Jenis Kelamin :</label><br>
+        <input type="radio" name="gender" value="laki-laki"> Laki-laki<br>
+        <input type="radio" name="gender" value="perempuan"> Perempuan<br><br>
+        <label>Pilih jenis beasiswa :</label><br>
+        <select class="form-control" required>
+            <option value="" disabled selected>Pilih Jenis Beasiswa</option>
+            <option value="beasiswa1">Beasiswa Nusantara Afirmasi</option>
+            <option value="beasiswa2">Beasiswa Nusantara Unggulan</option>
+        </select><br><br>
+        <input type="checkbox" name="agree" required> Saya menyetujui syarat dan ketentuan<br><br>
+        <button type="submit">Daftar</button>
+    </div>
+</body>
+</html>
